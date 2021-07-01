@@ -1,4 +1,5 @@
 const handleSignIn = (req,res,db,bcrypt)=>{
+// const handleSignIn = (db,bcrypt) => (req,res) => { If we are to use the way we did Line 34 in Server.js file then here we do this 
 	db.select('email', 'hash').from('login')
 	.where('email','=', req.body.email)
 	.then(data=>{
