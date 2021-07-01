@@ -3,8 +3,9 @@ const cors = require('cors');
 const bcrypt = require('bcrypt-nodejs');
 const knex = require('knex');
 const { response } = require('express');
-const register = require('./controllers/register');
 const signin = require('./controllers/signin');
+const register = require('./controllers/register');
+
 
 const db = knex({
 	client: 'pg',
